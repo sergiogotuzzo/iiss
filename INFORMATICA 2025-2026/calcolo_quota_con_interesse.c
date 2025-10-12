@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int anni, cont = 1;
+    int anni, i = 1;
     float capitale, tasso = 0.1f;
 
-    printf("Capitale iniziale: ");
+    printf("Capitale iniziale:");
     scanf("%f", &capitale);
 
-    printf("Dopo quanti anni? ");
+    printf("Dopo quanti anni?");
     scanf("%d", &anni);
 
-    while (cont <= anni) {
-        capitale += capitale*tasso;
-        cont++;
+    while (i <= anni) {
+        capitale += capitale * tasso;
+        i++;
     }
 
     printf("Il saldo finale ammonta a: %f", capitale);
