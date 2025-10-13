@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    printf("Inserisci un orario: ");
-
     int h1, m1, s1;
 
+    printf("Inserisci un orario: ");
     scanf("%d:%d:%d", &h1, &m1, &s1);
-    printf("Inserisci un orario da sommare al precedente inserito: ");
 
     int h2, m2, s2;
 
+    printf("Inserisci un orario da sommare al precedente inserito: ");
     scanf("%d:%d:%d", &h2, &m2, &s2);
 
     int h3, m3, s3;

@@ -3,13 +3,13 @@
 int main() {
     int n, sum = 0;
 
-    printf("Inserisci il numero di valori da sommare tra loro: ");
+    printf("Inserisci il numero di valori da sommare tra loro\n");
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
         int tmp;
 
-        printf("Inserisci il %d° numero: ", i + 1);
+        printf("Inserisci il %d° numero\n", i + 1);
         scanf("%d", &tmp);
 
         sum += tmp;

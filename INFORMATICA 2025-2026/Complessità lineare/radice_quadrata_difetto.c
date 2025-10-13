@@ -3,7 +3,7 @@
 int main() {
     int n, res = 0;
 
-    printf("Inserisci un numero: ");
+    printf("Inserisci un numero\n");
     scanf("%d", &n);
 
     while (res * res <= n) {

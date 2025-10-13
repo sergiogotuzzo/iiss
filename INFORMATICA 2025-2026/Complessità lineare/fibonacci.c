@@ -3,7 +3,7 @@
 int main() {
     int max;
 
-    printf("Inserisci il limite di numeri di Fibonacci:");
+    printf("Inserisci il limite di numeri di Fibonacci\n");
     scanf("%d", &max);
 
     int n1 = 1, n2 = 0, i = 0;

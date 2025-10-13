@@ -3,7 +3,7 @@
 int main() {
     int n;
 
-    printf("Inserisci un numero:");
+    printf("Inserisci un numero\n");
     scanf("%d", &n);
 
     int last = 1;

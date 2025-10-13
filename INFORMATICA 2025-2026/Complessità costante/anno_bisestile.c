@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("Inserisci un anno: ");
-
     int anno;
 
+    printf("Inserisci un anno\n");
     scanf("%d", &anno);
 
     if (anno % 400 == 0) {

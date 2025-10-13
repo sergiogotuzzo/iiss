@@ -3,10 +3,10 @@
 int main() {
     int n, exp, res = 1;
 
-    printf("Inserisci il numero: ");
+    printf("Inserisci un numero\n");
     scanf("%d", &n);
 
-    printf("Inserisci l'esponente: ");
+    printf("Inserisci l'esponente\n");
     scanf("%d", &exp);
 
     for (int i = 1; i <= exp; i++) {

@@ -3,10 +3,10 @@
 int main() {
     int n, d;
 
-    printf("Inserisci il numero: ");
+    printf("Inserisci il numero\n");
     scanf("%d", &n);
 
-    printf("Inserisci il dividendo: ");
+    printf("Inserisci il dividendo\n");
     scanf("%d", &d);
 
     int tmp = n, i = 0;

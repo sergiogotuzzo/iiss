@@ -3,7 +3,7 @@
 int main() {
     int n1, n2;
 
-    printf("Inserisci due numeri:");
+    printf("Inserisci due numeri\n");
     scanf("%d %d", &n1, &n2);
 
     int min = n1 > n2 ? n2 : n1;
