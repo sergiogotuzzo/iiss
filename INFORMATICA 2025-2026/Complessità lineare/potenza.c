@@ -9,7 +9,7 @@ int main() {
     printf("Inserisci l'esponente\n");
     scanf("%d", &exp);
 
-    for (int i = 1; i <= exp; i++) {
+    for (int i = 0; i < exp; i++) {
         res *= n;
     }
 

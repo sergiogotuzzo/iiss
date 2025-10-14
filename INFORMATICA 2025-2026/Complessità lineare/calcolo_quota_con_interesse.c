@@ -15,9 +15,8 @@ int main() {
 
     int i = 1;
 
-    while (i <= anni) {
+    while (i++ <= anni) {
         capitale += capitale * tasso;
-        i++;
     }
 
     printf("Il saldo finale ammonta a %f", capitale);
