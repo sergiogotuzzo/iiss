@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("Inserisci le coordinate del punto: ");
+    printf("Inserisci le coordinate del punto\n");
 
     int x, y;
 
