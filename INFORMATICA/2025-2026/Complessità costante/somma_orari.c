@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int h1, m1, s1;
+
+    printf("Inserisci un orario\n");
+    scanf("%d:%d:%d", &h1, &m1, &s1);
+
+    int h2, m2, s2;
+
+    printf("Inserisci un orario da sommare al precedente inserito\n");
+    scanf("%d:%d:%d", &h2, &m2, &s2);
+
+    int s3 = (s1 + s2) % 60;
+    int m3 = (m2 + m1) % 60 + (s1 + s2) / 60;
+    int h3 = (h2 + h1) % 60 + (m1 + m2) / 60;
+
+    printf("%d:%d:%d\n", h3, m3, s3);
+
+    return 0;
+}
