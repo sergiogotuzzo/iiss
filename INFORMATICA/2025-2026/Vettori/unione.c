@@ -14,7 +14,7 @@ int main() {
         scanf("%d", &len1);
     } while (len1 <= 0);
 
-    int v1[len1];
+    int arr1[len1];
 
     for (int i = 0; i < len1; i++) {
         int tmp;
@@ -22,7 +22,7 @@ int main() {
         printf("Inserisci il valore n. %d del primo vettore\n", i);
         scanf("%d", &tmp);
 
-        v1[i] = tmp;
+        arr1[i] = tmp;
     }
 
     int len2;
@@ -32,7 +32,7 @@ int main() {
         scanf("%d", &len2);
     } while (len2 <= 0);
 
-    int v2[len2];
+    int arr2[len2];
 
     for (int i = 0; i < len2; i++) {
         int tmp;
@@ -40,23 +40,23 @@ int main() {
         printf("Inserisci il valore n. %d del secondo vettore\n", i);
         scanf("%d", &tmp);
 
-        v2[i] = tmp;
+        arr2[i] = tmp;
     }
 
-    int len3 = len1 + len2, v3[len3];
+    int len3 = len1 + len2, arr3[len3];
 
     for (int i = 0; i < len1; i++) {
-        v3[i] = v1[i];
+        arr3[i] = arr1[i];
     }
 
     for (int i = len1, j = 0; i < len3; i++, j++) {
-        v3[i] = v2[j];
+        arr3[i] = arr2[j];
     }
 
-    printf("v3[%d] = {", len3);
+    printf("arr3[%d] = {", len3);
 
     for (int i = 0; i < len3; i++) {
-        printf("%d", v3[i]);
+        printf("%d", arr3[i]);
 
         if (i != len3 - 1) {
             printf(", ");
