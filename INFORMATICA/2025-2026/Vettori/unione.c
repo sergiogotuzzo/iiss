@@ -10,7 +10,7 @@ int main() {
     int len1;
 
     do {
-        printf("Inserisci il numero di valori del primo vettore\n");
+        printf("Inserisci la lunghezza del primo vettore\n");
         scanf("%d", &len1);
     } while (len1 <= 0);
 
@@ -28,7 +28,7 @@ int main() {
     int len2;
 
     do {
-        printf("Inserisci il numero di valori del secondo vettore\n");
+        printf("Inserisci la lunghezza del secondo vettore\n");
         scanf("%d", &len2);
     } while (len2 <= 0);
 

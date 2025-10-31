@@ -11,7 +11,7 @@ int main() {
     int len;
 
     do {
-        printf("Inserisci il numero di valori del vettore\n");
+        printf("Inserisci la lunghezza del vettore\n");
         scanf("%d", &len);
     } while (len <= 0);
 
