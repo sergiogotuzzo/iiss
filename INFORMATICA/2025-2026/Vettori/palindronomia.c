@@ -5,7 +5,6 @@
 */
 
 #include <stdio.h>
-#include <stdbool.h>
 
 int main() {
     int len;
@@ -26,19 +25,15 @@ int main() {
         arr[i] = tmp;
     }
 
-    bool palindromo = true;
-
     for (int i = 0, j = len; i < len; i++,j--) {
-        if (arr[i] != arr[j-1]) {
-            palindromo = false;
+        if (arr[i] != arr[j - 1]) {
+            printf("Il vettore non e' palindromo\n");
+
+            return 0;
         }
     }
 
-    if (palindromo) {
-        printf("Il vettore e' palindromo\n");
-    } else {
-        printf("Il vettore non e' palindromo\n");
-    }
+    printf("Il vettore e' palindromo\n");
 
 	return 0;
 }	
