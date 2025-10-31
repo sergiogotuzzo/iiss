@@ -23,14 +23,16 @@ int main() {
         scanf("%d", &tmp);
 
         arr[i] = tmp;
+    }
 
+    for (int i = 0; i < len; i++) {
         for (int j = 0; j < i + 1; j++) {
             if (i != j && arr[i] == arr[j]) {
                 arr[i] = 0;
             }
         }
     }
-    
+
     printf("arr[%d] = {", len);
 
     for (int i = 0; i < len; i++) {
