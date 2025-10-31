@@ -14,7 +14,7 @@ int main() {
         scanf("%d", &n);
     } while (n <= 0);
 
-    int v[n];
+    int arr[n];
 
     for (int i = 0; i < n; i++) {
         int tmp;
@@ -22,18 +22,18 @@ int main() {
         printf("Inserisci il valore n. %d\n", i);
         scanf("%d", &tmp);
 
-        v[i] = tmp;
+        arr[i] = tmp;
     }
     
-    int max = v[0], min = v[0];
+    int max = arr[0], min = arr[0];
 
     for (int i = 0; i < n; i++) {
-        if (v[i] > max) {
-            max = v[i];
+        if (arr[i] > max) {
+            max = arr[i];
         }
 
-        if (v[i] < min) {
-            min = v[i];
+        if (arr[i] < min) {
+            min = arr[i];
         }
     }
 

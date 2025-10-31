@@ -14,7 +14,7 @@ int main() {
         scanf("%d", &n);
     } while (n <= 0);
 
-    int v[n];
+    int arr[n];
 
     for (int i = 0; i < n; i++) {
         int tmp;
@@ -22,19 +22,19 @@ int main() {
         printf("Inserisci il valore n. %d\n", i);
         scanf("%d", &tmp);
 
-        v[i] = tmp;
+        arr[i] = tmp;
     }
 
     int sum = 0;
 
     for (int i = 0; i < n; i++) {
-        sum += v[i];
+        sum += arr[i];
     }
 
-    printf("v[%d] = {", n);
+    printf("arr[%d] = {", n);
 
     for (int i = 0; i < n; i++) {
-        printf("%d", v[i]);
+        printf("%d", arr[i]);
 
         if (i != n - 1) {
             printf(", ");

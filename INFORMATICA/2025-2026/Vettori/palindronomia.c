@@ -15,7 +15,7 @@ int main() {
         scanf("%d", &n);
     } while (n <= 0);
 
-    int v[n];
+    int arr[n];
 
     for (int i = 0; i < n; i++) {
         int tmp;
@@ -23,13 +23,13 @@ int main() {
         printf("Inserisci il valore n. %d\n", i);
         scanf("%d", &tmp);
 
-        v[i] = tmp;
+        arr[i] = tmp;
     }
 
     bool palindromo = true;
 
     for (int i = 0, j = n; i < n; i++,j--) {
-        if (v[i] != v[j-1]) {
+        if (arr[i] != arr[j-1]) {
             palindromo = false;
         }
     }

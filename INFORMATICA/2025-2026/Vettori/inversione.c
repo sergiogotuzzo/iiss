@@ -14,7 +14,7 @@ int main() {
         scanf("%d", &n);
     } while (n <= 0);
 
-    int v[n];
+    int arr[n];
 
     for (int i = 0; i < n; i++) {
         int tmp;
@@ -22,13 +22,13 @@ int main() {
         printf("Inserisci il valore n. %d\n", i);
         scanf("%d", &tmp);
 
-        v[i] = tmp;
+        arr[i] = tmp;
     }
 
     int v_invertito[n];
 
     for (int i = n, j = 0; i > 0; i--, j++) {
-        v_invertito[j] = v[i - 1];
+        v_invertito[j] = arr[i - 1];
     }
 
     printf("v_invertito[%d] = {", n);
