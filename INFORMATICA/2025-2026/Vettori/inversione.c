@@ -7,16 +7,16 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int len;
 
     do {
         printf("Inserisci il numero di valori del vettore\n");
-        scanf("%d", &n);
-    } while (n <= 0);
+        scanf("%d", &len);
+    } while (len <= 0);
 
-    int arr[n];
+    int arr[len];
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         int tmp;
 
         printf("Inserisci il valore n. %d\n", i);
@@ -25,18 +25,18 @@ int main() {
         arr[i] = tmp;
     }
 
-    int v_invertito[n];
+    int v_invertito[len];
 
-    for (int i = n, j = 0; i > 0; i--, j++) {
+    for (int i = len, j = 0; i > 0; i--, j++) {
         v_invertito[j] = arr[i - 1];
     }
 
-    printf("v_invertito[%d] = {", n);
+    printf("v_invertito[%d] = {", len);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         printf("%d", v_invertito[i]);
 
-        if (i != n - 1) {
+        if (i != len - 1) {
             printf(", ");
         }
     }

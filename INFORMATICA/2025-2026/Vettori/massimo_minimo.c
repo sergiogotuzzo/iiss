@@ -7,16 +7,16 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int len;
 
     do {
         printf("Inserisci il numero di valori del vettore\n");
-        scanf("%d", &n);
-    } while (n <= 0);
+        scanf("%d", &len);
+    } while (len <= 0);
 
-    int arr[n];
+    int arr[len];
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         int tmp;
 
         printf("Inserisci il valore n. %d\n", i);
@@ -27,7 +27,7 @@ int main() {
     
     int max = arr[0], min = arr[0];
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         if (arr[i] > max) {
             max = arr[i];
         }

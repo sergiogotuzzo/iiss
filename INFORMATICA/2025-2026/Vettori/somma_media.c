@@ -7,16 +7,16 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int len;
 
     do {
         printf("Inserisci il numero di valori del vettore\n");
-        scanf("%d", &n);
-    } while (n <= 0);
+        scanf("%d", &len);
+    } while (len <= 0);
 
-    int arr[n];
+    int arr[len];
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         int tmp;
 
         printf("Inserisci il valore n. %d\n", i);
@@ -27,23 +27,23 @@ int main() {
 
     int sum = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         sum += arr[i];
     }
 
-    printf("arr[%d] = {", n);
+    printf("arr[%d] = {", len);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         printf("%d", arr[i]);
 
-        if (i != n - 1) {
+        if (i != len - 1) {
             printf(", ");
         }
     }
 
     printf("}\n");
 
-    printf("Somma: %d\nMedia: %d\n", sum, sum / n);
+    printf("Somma: %d\nMedia: %d\n", sum, sum / len);
 
 	return 0;
 }	
