@@ -21,11 +21,11 @@ void ruota_sinistra(int arr[], int len, int pos) {
         arr[pos - 1 - i] = tmp;
     }
 
-    for (int i = pos; i < len / 2; i++) {
+    for (int i = pos; i < (len + pos) / 2; i++) {
         int tmp = arr[i];
 
-        arr[i] = arr[len - 1 - i];
-        arr[len - 1 - i] = tmp;
+        arr[i] = arr[len - 1 - (i - pos)];
+        arr[len - 1 - (i - pos)] = tmp;
     }
     
     for (int i = 0; i < len / 2; i++) {
@@ -37,7 +37,7 @@ void ruota_sinistra(int arr[], int len, int pos) {
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int len = sizeof(arr) / sizeof(int);
 
     ruota_sinistra(arr, len, 3);
