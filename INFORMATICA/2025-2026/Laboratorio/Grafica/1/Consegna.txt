@@ -1,0 +1,101 @@
+Docum libreria:
+https://home.cs.colorado.edu/~main/bgi/doc/
+
+https://sdl-bgi.sourceforge.io/#howto
+https://master.dl.sourceforge.net/project/sdl-bgi/sdl_bgi-quickref.pdf?viasf=1
+
+
+
+compilare con:  gcc -o program program.c -lSDL_bgi -lSDL2
+
+//------------------- recuperare codice da  URL    https://home.cs.colorado.edu/~main/bgi/doc/circle.html 
+
+(!! eliminare la riga  #include <conio.h>, da errore altrimenti )
+
+programma esempio:
+
+//gcc -o program program.c -lSDL_bgi -lSDL2
+
+/* circle example */
+
+
+
+#include <graphics.h>
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+
+
+int main(void)
+
+{
+
+   /* request autodetection */
+
+   int gdriver = DETECT, gmode, errorcode;
+
+   int midx, midy, radius = 100;
+
+
+
+   /* initialize graphics and local variables */
+
+   initgraph(&gdriver, &gmode, "");
+
+
+
+   /* read result of initialization */
+
+   errorcode = graphresult();
+
+   if (errorcode != grOk) {   /* an error occurred */
+
+      printf("Graphics error: %s\n", grapherrormsg(errorcode));
+
+
+
+      printf("Press any key to halt:");
+
+      getch();
+
+      exit(1);               /* terminate with an error code */
+
+   }
+
+    /* Inizio codice */
+    int circleX = getmaxx() / 2;
+    int circleY = getmaxy() / 2;
+    int raggio = 200;
+
+       circle(circleX,circleY,raggio);
+
+   getch();
+   closegraph();
+   return 0;
+
+}
+
+
+
+
+
+Esercizi:
+considera sempre una finestra grafica da 1000x500 pixel
+
+1- un cerchio che si muove in orizzontale, nella finestra
+2- come 1 ma rimbalza sui lati della finestra
+
+3 - un rettangolo di lati a, b posizionato in un punto a scelta dello schermo
+4 - lancia 1000 pixel con coordinate casuali, contare quanti finiscono DENTRO il rettangolo del punto 3
+
+
+5 - come 4 ma con un cerchio
+
+
+
+-> per installare su pc linux casa:1) andare su https://sdl-bgi.sourceforge.io/
+2) scaricare   sdl_bgi_2.6.0-1_amd64.deb
+3)  installare con diritti amministrativi:  sudo apt install
+sdl_bgi_2.6.0-1_amd64.deb

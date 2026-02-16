@@ -1,0 +1,41 @@
+# Esercizi grafica
+
+utilizzando il compilatore  C e la libreria  https://sdl-bgi.sourceforge.io/#howto  
+
+
+# Scacchiera
+Implementare una scacchiera 8x8, colori celle bianche e nere. Dimensione minima 500 x 500 pixel
+(usare cicli per disegnarla e per filling)
+https://www.geeksforgeeks.org/c/setfillstyle-floodfill-c/
+
+
+# Cerchi Olimpici
+Disegnare la bandiera delle olimpiadi, inserendo una semplice animazione (es. cerchio , pausa,  cerchio...)
+
+
+# Bandiere
+Disegnare le bandiere nazionali di:
+- Italia
+- Giappone
+- Tonga
+- Repubblica Ceca
+
+parametri:  larghezza e altezza in pixel della bandiera.
+
+
+
+
+# Cerchi casuali
+Generare 20 cerchi con coordinate, raggio e colore casuali
+Usare 4 vettori (X, Y, R, Colore)  per memorizzare le coordinate, raggio  e  colore di ogni cerchio, quindi disegnarli.
+
+
+# Scala
+
+Disegnare  una scala. Parametri: altezza gradino, profondità gradino, dimensioni della finestra grafica.
+Il disegno si interompe quando si raggiunge un limite della finestra grafica
+
+
+# Omino che cammina
+
+Disegnare un omino stilizzato  che cammina da sx a dx (muove braccia e gambe)
