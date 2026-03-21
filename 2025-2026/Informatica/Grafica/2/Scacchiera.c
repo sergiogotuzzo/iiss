@@ -1,28 +1,12 @@
 #include <graphics.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <stdbool.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
-
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
-
     int square = 70;
     int table = 8;
+
+    initwindow(square * table, square * table, "Scacchiera");
+
     bool flag = true;
 
     int x = 0;
@@ -35,10 +19,8 @@ int main() {
             flag = !flag;
         }
 
-        setcolor(flag ? BLACK : WHITE);
-        rectangle(k * square, j * square, k * square + square, j * square + square);
         setfillstyle(SOLID_FILL, flag ? BLACK : WHITE);
-        floodfill(k * square + 1, j * square + 1, flag ? BLACK : WHITE);
+        bar(k * square, j * square, k * square + square, j * square + square);
 
         flag = !flag;
     }

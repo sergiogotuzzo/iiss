@@ -11,46 +11,32 @@
 #include <time.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
-
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
-
-    int width = 200;
-    int height = 100;
-    int x = getmaxx() / 2 - width / 2;
-    int y = getmaxy() / 2 - height / 2;
-    
-    rectangle(x, y, x + width, y + height);
-
-    int rolls = 1000;
-
     srand(time(NULL));
 
-    int inRectangle = 0;
+    initwindow(800, 600, "Pixel casuali dentro un rettangolo");
 
-    for (int i = 0; i < 1000; i++) {
-        int coordX = rand() % 1000;
-        int coordY = rand() % 1000;
+    int rectWidth = 200;
+    int rectHeight = 100;
+    int rectX = (getmaxx() - rectWidth) / 2;
+    int rectY = (getmaxy() - rectHeight) / 2;
+    
+    rectangle(rectX, rectY, rectX + rectWidth, rectY + rectHeight);
 
-        if ((coordX >= x && coordX <= x + width) && (coordY >= y && coordY <= y + height)) {
-            inRectangle++;
+    int rolls = 1000;
+    int count = 0;
+
+    for (int i = 0; i < rolls; i++) {
+        int x = rand() % rolls;
+        int y = rand() % rolls;
+
+        putpixel(x, y, WHITE);
+
+        if ((x >= rectX && x <= rectX + rectWidth) && (y >= rectY && y <= rectY + rectHeight)) {
+            count++;
         }
     }
 
-    printf("%d\n", inRectangle);
+    printf("%d\n", count);
 
     getch();
 

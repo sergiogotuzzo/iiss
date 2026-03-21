@@ -4,25 +4,13 @@
 #include <stdbool.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
+    initwindow(800, 600, "Scala");
 
-    initgraph(&gdriver, &gmode, "");
+    int w = 30;
+    int h = 20;
 
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
-
-    for (int i = 0; i < getmaxy() / 20; i++) {
-        bar(i * 20, getmaxy() - (i + 1) * 20, i * 20 + 20, getmaxy());
+    for (int i = 0; i < getmaxy() / h; i++) {
+        bar(i * w, getmaxy() - (i + 1) * h, i * w + w, getmaxy());
     }
 
     getch();

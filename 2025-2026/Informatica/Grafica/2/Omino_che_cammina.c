@@ -1,25 +1,8 @@
 #include <graphics.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <stdbool.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
-
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
+    initwindow(800, 600, "Omino che cammina");
 
     bool sx = true;
     int a = 100;
@@ -28,13 +11,14 @@ int main() {
     for (int i = 0; i < getmaxx() - 100; i++) {
         cleardevice();
         
-        circle(50 + i, 150, 50); // Testa
-        line(50 + i, 150 + 50, 50 + i, 150 + 150); // Torace
+        circle(50 + i, getmaxy() - 100 - 100 - 50, 50); // Testa
+        line(50 + i, getmaxy() - 100 - 100, 50 + i, getmaxy() - 100); // Torace
+        line(50 + i, getmaxy() - 100 - 100, b + i, getmaxy() - 100); // Braccio 1
+        line(50 + i, getmaxy() - 100 - 100, a + i, getmaxy() - 100); // Braccio 2
+        line(50 + i, getmaxy() - 100, b + i, getmaxy()); // Gamba 1
+        line(50 + i, getmaxy() - 100, a + i, getmaxy()); // Gamba 2
 
-        line(50 + i, 150 + 50, b + i, 150 + 150); // Braccio sinistro
-        line(50 + i, 150 + 50, a + i, 150 + 150); // Braccio destro
-        line(50 + i, 150 + 50 + 100, b + i, 150 + 150 + 100); // Gamba sinistra
-        line(50 + i, 150 + 50 + 100, a + i, 150 + 150 + 100); // Gamba destra
+        refresh();
 
         if (sx) {
             a--;

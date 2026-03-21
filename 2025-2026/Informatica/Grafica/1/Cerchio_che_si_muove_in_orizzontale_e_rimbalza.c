@@ -6,49 +6,25 @@
 */
 
 #include <graphics.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <stdbool.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
+    initwindow(800, 600, "Cerchio che si muove in orizzontale e rimbalza");
 
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
-
-    int radius = 200;
-    int circleX = getx() + radius;
-    int circleY = getmaxy() / 2;
-    bool left = true;
+    int r = 100;
 
     while (true) {
-        cleardevice();
-
-        if (circleX >= getmaxx() - radius) {
-            left = false;
-        } else if (circleX <= getx() + radius) {
-            left = true;
+        for (int i = r; i < getmaxx() - 100; i++) {
+            cleardevice();
+            circle(i, getmaxy() / 2, r);
+            refresh();
         }
 
-        if (left) {
-            circleX += 1;
-        } else {
-            circleX -= 1;
+        for (int i = getmaxx() - r; i >= r; i--) {
+            cleardevice();
+            circle(i, getmaxy() / 2, r);
+            refresh();
         }
-
-        circle(circleX, circleY, radius);
     }
 
     getch();

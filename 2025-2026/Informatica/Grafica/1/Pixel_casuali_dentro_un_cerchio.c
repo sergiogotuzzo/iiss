@@ -11,49 +11,35 @@
 #include <time.h>
 
 int main() {
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
+    srand(time(NULL));
 
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
+    initwindow(800, 600, "Pixel casuali dentro un cerchio");
 
     int circleX = getmaxx() / 2;
     int circleY = getmaxy() / 2;
-    int radius = 400;
+    int r = 100;
 
-    circle(circleX, circleY, radius);
+    circle(circleX, circleY, r);
 
     int rolls = 1000;
+    int count = 0;
 
-    srand(time(NULL));
+    for (int i = 0; i < rolls; i++) {
+        int x = rand() % rolls;
+        int y = rand() % rolls;
 
-    int inCircle = 0;
+        putpixel(x, y, WHITE);
 
-    for (int i = 0; i < 1000; i++) {
-        int coordX = rand() % 1000;
-        int coordY = rand() % 1000;
-
-        int dx = coordX - circleX;
-        int dy = coordY - circleY;
+        int dx = x - circleX;
+        int dy = y - circleY;
 
         // Equazione per trovare una regione nel piano cartesiano delimitata da un cerchio
-        if ((dx * dx) + (dy * dy) <= (radius * radius)) {
-            inCircle++;
+        if ((dx * dx) + (dy * dy) <= (r * r)) {
+            count++;
         }
     }
 
-    printf("%d\n", inCircle);
+    printf("%d\n", count);
 
     getch();
 

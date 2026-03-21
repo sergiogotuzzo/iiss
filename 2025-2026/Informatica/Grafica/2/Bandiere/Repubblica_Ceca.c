@@ -7,31 +7,13 @@ int main() {
     int width = 600;
     int height = 400;
 
-    int gdriver = DETECT;
-    int gmode;
-    int errorcode;
+    initwindow(width, height, "Repubblica Ceca");
 
-    initgraph(&gdriver, &gmode, "");
-
-    errorcode = graphresult();
-
-    if (errorcode != grOk) {
-        printf("Graphics error: %s\n", grapherrormsg(errorcode));
-        printf("Press any key to halt:");
-
-        getch();
-
-        exit(1);
-    }
-
-    rectangle(0, 0, width, height / 2);
     setfillstyle(SOLID_FILL, WHITE);
-    floodfill(1, 1, WHITE);
-
-    setcolor(RED);
-    rectangle(0, height / 2, width, height);
+    bar(0, 0, width, height / 2);
+    
     setfillstyle(SOLID_FILL, RED);
-    floodfill(1, height / 2 + 1, RED);
+    bar(0, height / 2, width, height);
 
     setcolor(BLUE);
     line(0, 0, 0, height);
